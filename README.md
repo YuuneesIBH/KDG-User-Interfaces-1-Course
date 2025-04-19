@@ -84,7 +84,7 @@ Alle HTML en CSS werden gevalideerd via de officiële W3C-tools. Resultaten zijn
 
 **Younes El Azzouzi**  
 KdG - Toegepaste Informatica  
-Academiejaar 2024-2025
+Academiejaar 2022-2023
 
 ---
 
