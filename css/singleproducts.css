@@ -1,0 +1,66 @@
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "gamenaam beschrijving";
+  grid-gap: 2rem;
+  max-width: 90%;
+  margin: auto;
+}
+
+#info_naam {
+  grid-area: gamenaam;
+  padding-bottom: 80px;
+  padding-left: 435px;
+  padding-top: 200px;
+}
+
+#gamenaam {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 0;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+#prijs {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#info_beschrijving {
+  grid-area: beschrijving;
+  width: 70%;
+  padding-top: 335px;
+  padding-bottom: 160px;
+}
+
+#info_recommended {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#info_recommended > h2{
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 27px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#info_recommended > section {
+  margin:  0 1em;
+  padding-bottom: 70px;
+}
+
+h3, p {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}

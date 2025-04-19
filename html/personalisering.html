@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link href="../css/site.css" rel="stylesheet" type="text/css">
+  <link href="../css/personalisering.css" rel="stylesheet" type="text/css">
+  <title>Personalisering | Playtopia</title>
+  <script defer src="../js/form_validation.js"></script>
+  <script type="module" src="../js/dyn_form.js"></script>
+</head>
+<body>
+<h1 class="verborgenTitle">Personaliseringspagina</h1>
+<header>
+  <nav>
+    <h2 class="verborgenTitle">Hieronder vindt je ons portaal, teleporteer naar de pagina die je wilt bezoeken!</h2>
+    <ul id="navigatie">
+      <li><a href="../index.html">Home</a></li>
+      <li>
+        <a href="../html/productspage.html">Producten</a>
+        <ul>
+          <li><a href="../html/productspage.html#producten_standard">Standard Editions</a></li>
+          <li><a href="../html/productspage.html#producten_deluxe">Deluxe Editions</a></li>
+          <li><a href="../html/productspage.html#producten_collectors">Collectors Editions</a></li>
+          <li><a href="../html/productspage.html#producten_afprijzing">Playtopia Deals</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/faq.html">FAQ</a></li>
+      <li><a class="active" href="../html/personalisering.html">Personalisering</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav id="breadcrumb">
+    <h2 class="verborgenTitle">Waar ben ik?</h2>
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../html/personalisering.html">Personalisering</a></li>
+    </ol>
+  </nav>
+
+  <p class="verborgenTitle">Personaliseringspagina</p>
+  <p>Vul het onderstaande formulier in, hou rekening met de voorwaarden!</p>
+  <p>Gebruik een KdG mailadres. Geen spaties voor of achter je naam!</p>
+  <form id="personaliseer-form" method="GET" action="bevestigingspage.html">
+    <label for="product">Selecteer een product*</label>
+    <select id="product" name="product" required>
+      <option value="" selected>GAATWEG</option>
+      <option value="option2">GAATWEG</option>
+      <option value="option3">GAATWEG</option>
+    </select>
+
+
+    <label for="aantal">Aantal stuks:*</label>
+    <input type="number" id="aantal" name="aantal" required min="-10" max="10">
+    <span id="ongeldige_aantal"></span>
+    <label for="naam">Naam*</label>
+    <input type="text" id="naam" name="naam" required maxlength="40">
+    <span id="ongeldigenaam_foutmelding"></span>
+    <label for="email">E-mailadres*</label>
+    <input type="email" id="email" name="email" required maxlength="50" size="30">
+    <span id="ongeldige_mailadres"></span>
+    <label for="adres">Leveringsadres*</label>
+    <textarea id="adres" name="adres" required></textarea>
+    <label for="personaliseer-option1">Naambedrukking*</label>
+    <input type="text" id="personaliseer-option1" name="personaliseer-option1" required maxlength="12" size="12">
+    <label for="kleur">Verpakkingskleur*</label>
+    <input type="color" id="kleur" name="kleur">
+    <label for="personaliseer-option3">Leveringsdatum*</label>
+    <span id="ongeldige_leveringsdatum"></span>
+    <input type="date" id="personaliseer-option3" name="personaliseer-option3" required>
+    <input type="submit" value="Bestellen" id="verzend-knop">
+    <span id="verzend-error"></span>
+  </form>
+</main>
+
+<footer>
+  <section>
+    <h2 class="verborgenTitle">Footer</h2>
+    <p>Copyright 2023 Playtopia®</p>
+    <p>Volg ons op de volgende platformen!</p>
+    <a href="https://www.linkedin.com/in/youneselazzouzi/" target="_blank">LinkedIn</a>
+    <a href="https://www.kdg.be" target="_blank">KdG</a>
+    <a href="https://discord.gg/3knzmw2MxY" target="_blank">Discord</a>
+  </section>
+</footer>
+</body>
+
+</html>

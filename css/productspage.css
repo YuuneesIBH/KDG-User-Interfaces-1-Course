@@ -1,0 +1,118 @@
+
+main {
+    /*ervoor zorgen dat de filter en de artikelen naast mekaar komen te staan!*/
+    display: flex;
+}
+
+#producten_standard h4, #producten_deluxe h4, #producten_collectors h4  {
+    grid-column: 1 / -1;
+}
+
+.filter {
+    padding-top: 60px;
+    padding-left: 110px;
+}
+
+#producten_standard,
+#producten_deluxe,
+#producten_collectors {
+    padding-left: 200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+h4{
+    font-size: 28px;
+}
+
+h2, h3{
+    font-size: 23px;
+}
+
+#producten_afprijzing h4{
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+#producten_afprijzing{
+    padding-top: 50px;
+}
+
+h5, p {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* hieronder volgt de code voor de styling van de filter */
+.filter h2 {
+    font-weight: bold;
+
+}
+    
+.filter ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+.filter label {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+strong {
+    color: red;
+    font-size: 19px;
+}
+
+  
+section ul li label::before {
+    content: "\2713";
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
+
+#een:not(:checked) ~ section ul li #lbeen,
+#twee:not(:checked) ~ section ul li #lbtwee,
+#drie:not(:checked) ~ section ul li #lbdrie,
+#vier:not(:checked) ~ section ul li #lbvier{
+    background-color: rgb(58, 58, 57);
+}
+
+label:hover{
+    font-size: 16px;
+}
+
+label {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}  
+
+/*checkboxes onzichtbaar maken*/
+input[type="checkbox"]{
+    display: none;
+}
+
+/*hieronder volgt de code voor het filteren van de artikelen*/
+/*artikelen enkel vertonen als de bijhorende checkbox is aangevinkt*/
+#een:checked ~ .producten_catalogus section section article.een,
+#twee:checked ~ .producten_catalogus section section article.twee,
+#drie:checked ~ .producten_catalogus section section article.drie,
+#vier:checked ~ .producten_catalogus section section article.vier {
+    display: initial;
+}
+
+/*artikelen standaard invisible maken*/
+article.een,
+article.twee,
+article.drie,
+article.vier {
+    display: none;
+}

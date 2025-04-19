@@ -1,0 +1,93 @@
+main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:
+    'main divs';
+}
+
+#main_weergave {
+    grid-area: main;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-left: 50px;
+    text-align: center;
+    background-color: white;
+    border: #333;
+    border-radius: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+main h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+main p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+main span {
+    font-weight: bold;
+}
+
+main a {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+main a:hover {
+    color: #666;
+}
+
+div {
+    grid-area: divs;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border: #333;
+    border-radius: 18px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+div > p{
+    padding-top: 5px;
+    font-size: 15px;
+}
+
+div p:first-of-type {
+    font-size: 24px;
+    text-align: center;
+}
+
+/*hier snel height gebruikt want anders moet ik weer repititief werk verrichten met het resizen via een tool*/
+img {
+    height: 140px;
+}
+
+@keyframes text-scale {
+    0% {
+      font-size: 14px;
+    }
+    50% {
+      font-size: 18px;
+    }
+    100% {
+      font-size: 14px;
+    }
+}
+
+.tekst-animatie {
+    animation: text-scale 2s infinite;
+}

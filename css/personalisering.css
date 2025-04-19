@@ -1,0 +1,80 @@
+form {
+    max-width: 540px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+label {
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=submit]:active {
+    background-color: #3e8e41;
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+#error-message {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+main {
+    min-height: 1040px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+#verzend-knop {
+    margin-top: 12px;
+}
+#verzend-error{
+    /*error naast submit rood maken*/
+    color: red;
+}
+
+.validinput {
+    /*als de gegeven input valid is achtergrond groen*/
+    background-color: green;
+}

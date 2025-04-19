@@ -1,0 +1,171 @@
+/*algemene styling voor alle pagina's*/
+body {
+    background: #BBD2C5;
+    background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);
+    background: linear-gradient(to right, #292E49, #536976, #BBD2C5);
+    font-family: 'Trebuchet MS', 'sans-serif';
+    padding: 0;
+    margin: 0;
+}
+/*navbar opmaken*/
+nav {
+    background: black;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 17px;
+}
+
+.active {
+    color: rgb(95, 83, 83);
+    font-size: 18px;
+    font-weight:bolder;
+}
+/*elementen van de navbar stylen HOME etc...*/
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight:lighter;
+    text-transform: uppercase;
+}
+/*vergroten on hover*/
+nav ul li:hover{
+    transform: scale(1.2);
+}
+
+nav ul ul {
+    display: none;
+}
+
+#breadcrumb {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#breadcrumb li {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#breadcrumb li::before {
+    content: ">";
+    margin-right: 10px;
+    color: #fff;
+}
+
+#breadcrumb li:first-child::before {
+    content: "";
+}
+
+#breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#breadcrumb a:hover {
+    color: #aaa;
+}
+
+/*button styling*/
+button {
+    background-color: black;
+    border: none;
+    padding: 7px 16px;
+    font-size: 13px;
+    margin: 14px;
+    border-radius: 13px;
+    box-shadow: 2px 2px grey;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+button  {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*vergoot button onhover*/
+button:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: black;
+    padding: 35px;
+    text-align: center;
+    width: 100%;
+}
+/*de p aanroepen die zich in de main > section bevindt*/
+footer > section > p {
+    color: white;
+    font-size: 16px;
+}
+
+footer > section > a {
+    text-decoration: none;
+    font-weight: bold;
+    color:whitesmoke;
+}
+
+footer> section > h2 {
+    display: none;
+}
+
+#info_onnodig {
+    display: none;
+}
+
+/*heading voor alle pagina's offline halen dit zijn alle gezamelijke elementen van elke pagina*/
+.verborgenTitle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+    visibility: hidden;
+}
+
+/* ervoor zorgen dat wanneer je over de Producten hovert een submenu tevoorschijn komt*/
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+}
+
+nav ul li:hover ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+nav ul li ul {
+    border: 1px solid white;
+}
+
+nav ul li ul li a {
+    font-size: 11px;
+    display: block;
+    padding-right: 27px;
+}
+
+nav ul li:hover ul li a {
+    color: white;
+}

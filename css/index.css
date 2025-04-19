@@ -1,0 +1,99 @@
+/*grid toewijzen met 2 kolommen en 2 rijen*/
+.grid_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "foto welkom"
+    "button welkom"
+    "testimonials testimonials";
+    gap: 10px;
+}
+/*plaatsing secties*/
+#welkom_sectie {
+    padding-top: 190px;
+    padding-left: 100px;
+    grid-area: welkom;
+}
+
+#foto_button {
+    padding-top: 275px;
+    padding-left: 210px;
+    grid-area: foto;
+}
+
+#button_sectie {
+    padding-left: 440px;
+    grid-area: button;
+}
+
+article {
+    width: 80%;
+    max-width: 500px;
+}
+/*grid voor testimonials 3 kolommen (3 testimonials)*/
+#alle_testimonials{
+    grid-area: testimonials;
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "testimonial_tyler testimonial_susan testimonial_sinja";
+    gap: 35px;
+    justify-content: center;
+    grid-column: 1 / -1;
+    padding-bottom: 100px;
+}
+
+blockquote {
+    display: block;
+    padding-top: 150px;
+}
+/*afronden image*/
+blockquote img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+blockquote cite {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#testimonial_tyler {
+    grid-area: testimonial_tyler;
+    width: 80%;
+}
+
+#testimonial_susan {
+    grid-area: testimonial_susan;
+    width: 80%;
+}
+
+#testimonial_sinja {
+    grid-area: testimonial_sinja;
+    width: 80%;
+}
+
+#ontdek_aanbod {
+    background-color: black;
+    border: none;
+    padding: 7px 16px;
+    font-size: 13px;
+    margin: 14px;
+    border-radius: 13px;
+    box-shadow: 2px 2px grey;
+    cursor: pointer;
+    transition: 0.7s ease;
+    text-decoration: none;
+    color: white;
+}
+
+#ontdek_aanbod:hover{
+    font-size: 16px;
+}
